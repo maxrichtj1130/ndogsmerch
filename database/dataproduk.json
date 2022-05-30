@@ -1,0 +1,42 @@
+[
+  {
+    "SKU": 0,
+    "namaproduk": "ceplogs original t-shirt",
+    "desc": "<p>CEPLOGS edition is one of our collections on NDOGS merch. The word 'ceplogs' originated from the Javanese word for sunny-side-up egg (endok ceplok). So, this whole collection has the design of a sunny-side-up egg on top of it. sunny-side-up is also one of the simplest and most popular ways to process an egg around the world. This collection consists of two kinds of product : t-shirts and hoodies </p>",
+    "harga": 169000,
+    "gbrproduk": "https://www.maxrichardo.com/ndogs/images/gbrproduk/ceplog original",
+    "gambarproduk": "https://www.maxrichardo.com/ndogs/images/gambarproduk/ceplog original"
+  },
+  {
+    "SKU": 1,
+    "namaproduk": "ceplogs original hoodie",
+    "desc": "<p>CEPLOGS edition is one of our collections on NDOGS merch. The word 'ceplogs' originated from the Javanese word for sunny-side-up egg (endok ceplok). So, this whole collection has the design of a sunny-side-up egg on top of it. sunny-side-up is also one of the simplest and most popular ways to process an egg around the world. This collection consists of two kinds of product : t-shirts and hoodies </p>",
+    "harga": 199000,
+    "gbrproduk": "https://www.maxrichardo.com/ndogs/images/gbrproduk/ceplogs original",
+    "gambarproduk": "https://www.maxrichardo.com/ndogs/images/gambarproduk/ceplogs original"
+  },
+  {
+    "SKU": 2,
+    "namaproduk": "ceplogs vector t-shirt",
+    "desc": "<p>CEPLOGS edition is one of our collections on NDOGS merch. The word 'ceplogs' originated from the Javanese word for sunny-side-up egg (endok ceplok). So, this whole collection has the design of a sunny-side-up egg on top of it. sunny-side-up is also one of the simplest and most popular ways to process an egg around the world. This collection consists of two kinds of product : t-shirts and hoodies </p>",
+    "harga": 169000,
+    "gbrproduk": "https://www.maxrichardo.com/ndogs/images/gbrproduk/ceplog vector",
+    "gambarproduk": "https://www.maxrichardo.com/ndogs/images/gambarproduk/ceplog vector"
+  },
+  {
+    "SKU": 3,
+    "namaproduk": "ceplogs vector hoodies",
+    "desc": "<p>CEPLOGS edition is one of our collections on NDOGS merch. The word 'ceplogs' originated from the Javanese word for sunny-side-up egg (endok ceplok). So, this whole collection has the design of a sunny-side-up egg on top of it. sunny-side-up is also one of the simplest and most popular ways to process an egg around the world. This collection consists of two kinds of product : t-shirts and hoodies </p>",
+    "harga": 199000,
+    "gbrproduk": "https://www.maxrichardo.com/ndogs/images/gbrproduk/ceplogs vector",
+    "gambarproduk": "https://www.maxrichardo.com/ndogs/images/gambarproduk/ceplogs vector"
+  },
+  {
+    "SKU": 4,
+    "namaproduk": "godogs boiled egg levels t-shirt",
+    "desc": "",
+    "harga": 169000,
+    "gbrproduk": "https://www.maxrichardo.com/ndogs/images/gbrproduk/godog minutes",
+    "gambarproduk": "https://www.maxrichardo.com/ndogs/images/gambarproduk/godog minutes"
+  }
+]

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible`" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="scrollbar.css">
+  
+
+</head>
+<body>
+  <h6 style="position: fixed; z-index:10000000; text-align:center; width:100%; bottom: -20px;">Copyright© 2022 Max</h6>
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+    <div class="cartmenu">
+      <h4 id="cartjudul">CART</h4>
+      <a href="#/" onclick="closecart()" id="cartclose">CLOSE</a>
+      <div class="cartitems-container">
+      </div>
+      <div id="subtotal">
+        <span class="totalitem">3 item(s)</span>
+        <span class="subtotal-judul">SUBTOTAL : IDR</span>
+        <span class="subtotal-angka">XXX.000</span>
+        
+      </div>
+      <a href="checkout/index.html" class="checkout-btn">CHECKOUT</a>
+      
+    </div>
+  </div>
+  
+    <div class="noise"></div>
+    <div class="foot1">
+      <a class="sosmed" target="_blank" href="https://youtu.be/6BJCf_ObwyU"> YOUTUBE</a>
+      <a class="sosmed" target="_blank"href="https://instagram.com/ndogsmerch"> INSTAGRAM</a>
+      <a class="sosmed" target="_blank"href="https://twitter.com/ndogsmerch"> TWITTER</a>
+      
+    </div>
+    <div class="foot2">
+      <a class="sosmed"  href="shop/index.html"> SHOP</a>
+      <a class="sosmed" href="tracking/index.html"> TRACKING</a>
+      <a class="sosmed" href="about/index.html"> ABOUT</a>
+      
+    </div>
+  <div class="smoothscrollwrapper">  
+    <div class="centering">
+      <img src="https://maxrichardo.com/ndogs/images/logo.png" id="logo">
+      <div id="descdiv">
+        <img src="https://maxrichardo.com/ndogs/images/crott.png" id="crott" alt="">
+        <h2  id="desc">COLLECTIONS OF <br> EGG THEMED HOODIES & TEES</h2>
+      </div>
+      <a href="shop/index.html" class="button-primary" id="shopnow">SHOP NOW!!</a>
+   
+  
+      <div class="content">
+        <iframe src="https://www.youtube.com/embed/6BJCf_ObwyU" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    
+  </div>
+    
+    
+
+  <script src="https://kit.fontawesome.com/d2dbb556fa.js" crossorigin="anonymous"></script>
+    <script>
+      //smooth scrolling
+      const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+      var offset = 0;
+      body.style.height = Math.floor(height) + "px";
+      function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+        var scroll = "translateY(-" + offset + "px)";
+        scrollWrap.style.transform = scroll;
+        callScroll = requestAnimationFrame(smoothScroll);
+      }
+      smoothScroll()
+
+      //logo mengecil pas di scroll
+      const logo = document.getElementById('logo')
+      window.addEventListener('scroll',function(){
+        var dataminus = Math.min(700,Math.max(0, window.pageYOffset-96)*7/3)
+        logo.style.width = 888-dataminus+'px'
+
+      })
+        
+        
+    </script>
+
+    <script src="cart.js"></script>
+</body>
+</html>

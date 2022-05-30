@@ -1,0 +1,328 @@
+:root {
+    --primary: #ffe690;
+    --secondary: #4a2e14;
+}
+
+#index {
+    display: none;
+}
+
+@font-face {
+    font-family: Makasih;
+    src: url(../images/Makasih.ttf) format("truetype");
+}
+
+* {
+    font-family: Makasih;
+    color: var(--secondary);
+    align-self: center;
+
+}
+
+body {
+    background-color: lemonchiffon;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.smoothscrollwrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.centering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 10vw
+}
+
+.noise {
+    background-image: url('https://maxrichardo.com/ndogs/images/noise.png');
+    background-repeat: repeat;
+    background-size: auto;
+    z-index: 696969696;
+    mix-blend-mode: color-burn;
+    background-color: white;
+    position: fixed;
+    opacity: .1;
+    width: 300%;
+    height: 300%;
+    top: 0;
+    pointer-events: none;
+
+}
+
+
+
+#logo {
+    height: 60px;
+    z-index: 70;
+    transform: translateY(40%);
+    margin-top: -45px;
+    transition: all 888ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#logo:hover {
+    height: 88px;
+
+}
+
+.gambar-cont img {
+    width: 40vw;
+    left: 0vw;
+    margin-left
+}
+
+.gambar-cont {
+    display: flex;
+    margin-left: 0vw;
+    transition: all 500ms;
+    animation: crsl 10s infinite;
+
+}
+
+.gambarproduk {
+    width: 40vw;
+    margin-left: -40vw;
+    overflow: hidden;
+    background: rgb(255, 247, 223);
+    background: linear-gradient(180deg, rgb(255, 247, 226) 0%, rgb(255, 248, 225) 1%, rgba(255, 255, 187, 1) 100%, rgb(255, 255, 246) 100%, rgb(255, 255, 247) 100%);
+    border-radius: 3vw;
+    border: 1px solid var(--secondary);
+
+}
+
+@keyframes crsl {
+    0% {
+        margin-left: 0vw;
+    }
+
+    18% {
+        margin-left: -40vw;
+    }
+
+    22% {
+        margin-left: -40vw;
+    }
+
+    38% {
+        margin-left: -80vw;
+    }
+
+    44% {
+        margin-left: -80vw;
+    }
+
+    58% {
+        margin-left: -120vw;
+    }
+
+    66% {
+        margin-left: -120vw;
+    }
+
+    78% {
+        margin-left: -160vw;
+    }
+
+    88% {
+        margin-left: -160vw;
+    }
+
+    97% {
+        margin-left: 0vw;
+    }
+}
+
+.tulisan {
+    position: absolute;
+    margin-left: 42vw;
+    width: 38vw;
+    height: 10vh;
+    padding: 3vw;
+
+
+}
+
+.tulisan .namaproduk {
+    margin-top: -15vw;
+    width: 75%;
+
+}
+
+.select {
+    display: flex;
+}
+
+.selsize-cont,
+.selcolor-cont {
+    width: 100%;
+}
+
+.ssize-cont a {
+    color: var(--secondary);
+    text-decoration: none;
+    padding: .7vw .9vw;
+    border-radius: 50%;
+    font-size: 1.5vw;
+}
+
+.ssize-cont a:hover {
+    background-color: var(--secondary);
+    color: #ffe690 !important;
+}
+
+.ssz {
+    font-size: 1.1vw;
+    margin: 1vw;
+}
+
+.ssize-cont {
+    margin-top: .75vw;
+}
+
+
+.scolor-cont {
+    margin: 1vw 0;
+}
+
+.scolor {
+    padding: .45vw .9vw;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: .3vw;
+    z-index: 69;
+    transition: all 100ms;
+    border: .15vw solid var(--secondary);
+    font-size: 1vw;
+}
+
+
+.scolor:hover {
+    border: .3vw solid var(--secondary);
+
+}
+
+.scolor3 {
+    background-color: skyblue;
+    color: skyblue;
+}
+
+.scolor4 {
+    background-color: chocolate;
+    color: chocolate;
+}
+
+.scolor5 {
+    background-color: yellowgreen;
+    color: yellowgreen;
+}
+
+.scolor2 {
+    background-color: black;
+    color: black;
+}
+
+.scolor1 {
+    background-color: white;
+    color: white;
+}
+
+.description {
+    margin: 1.5vw 0;
+}
+
+.descisi {
+    overflow: auto;
+    height: 10vw;
+}
+
+.descisi p{
+    line-height: 25px;
+    text-align: justify;
+    word-spacing: 5px;
+}
+.ddz {
+    font-size: 1.2vw;
+    margin: 1vw;
+}
+
+.button-primary {
+    padding: .5vw;
+    border-radius: .5vw;
+    border: 1px solid var(--secondary);
+    background: rgb(255, 225, 144);
+    background: linear-gradient(0deg, rgba(255, 225, 144, 1) 0%, rgba(255, 230, 144, 1) 41%, rgba(255, 255, 187, 1) 91%, rgba(255, 255, 198, 1) 100%, rgba(255, 255, 225, 1) 100%);
+    text-decoration: none;
+
+}
+
+.readmore {
+    margin-top: .2vw;
+    display: flex;
+    justify-content: end;
+}
+
+.addtobag {
+    border: 1px solid red;
+    position: absolute;
+    bottom: 12vw;
+}
+
+.bag-btn {
+    position: absolute;
+    bottom: 0;
+    width: 40vw;
+    padding: 1vw 0;
+    text-align: center;
+    margin-left: 2vw;
+    font-size: 2.6vw;
+    background: linear-gradient(0deg, rgba(255, 225, 144, 1) 0%, rgba(255, 230, 144, 1) 41%, rgba(255, 255, 187, 1) 91%, rgba(255, 255, 198, 1) 100%, rgba(255, 255, 225, 1) 100%);
+    color: var(--secondary);
+    border-radius: 1.6vw;
+    text-decoration: none;
+    letter-spacing: .5vw;
+    box-shadow: black .2vw .3vw;
+    transition: all 300ms;
+    border: .1vw solid var(--secondary);
+
+}
+
+.bag-btn:hover {
+    box-shadow: var(--secondary) .6vw .5vw;
+}
+
+.back-btn {
+    position: absolute;
+    z-index: 69;
+    top: 100px;
+    margin-left: 10vw;
+    transition: all 200ms;
+}
+
+.back-btn:hover {
+    font-size: 15px;
+}
+
+.harga {
+    position: absolute;
+    top: 120px;
+    right: 8vw;
+    z-index: 69;
+    padding: 25px 30px;
+    background-image: url('https://maxrichardo.com/ndogs/images/crott harga.webp');
+    background-size: cover;
+    color: rgb(42, 8, 0);
+    opacity: .9;
+    font-size: 30px;
+}

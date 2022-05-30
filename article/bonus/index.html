@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../scrollbar.css">
+  <link rel="stylesheet" href="../../cart.css">
+  <link rel="stylesheet" href="../../navbar.css">
+</head>
+
+<body>
+  <h6 style="position: fixed; z-index:10000000; text-align:center; width:100%; bottom: -10px; font-size:6.9px">
+    Copyright© 2022 Max</h6>
+  <!--cart-->
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+    <div class="cartmenu">
+      <h4 id="cartjudul">CART</h4>
+      <a href="#/" onclick="closecart()" id="cartclose">CLOSE</a>
+      <div class="cartitems-container">
+      </div>
+      <div id="subtotal">
+        <span class="totalitem">3 item(s)</span>
+        <span class="subtotal-judul">SUBTOTAL : IDR</span>
+        <span class="subtotal-angka">XXX.000</span>
+      </div>
+      <a href="#/" class="checkout-btn">CHECKOUT</a>
+    </div>
+  </div>
+
+
+  <div class="noise"></div>
+  <div class="navbar">
+    <a href="../../index.html"><img id="logo" src="https://maxrichardo.com/ndogs/images/logo.png" alt=""></a>
+  </div>
+  <div class="navbar-menu">
+    <div class="menu1">
+      <div class="menu-yt menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://youtube.com/ndogs">YOUTUBE</a>
+      </div>
+      <div class="menu-ig menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://instagram.com/ndogsmerch">INSTAGRAM</a>
+      </div>
+      <div class="menu-tw menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://twitter.com/ndogsmerch">TWITTER</a>
+      </div>
+    </div>
+    <div class="menu2">
+      <div class="menu-shop menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" href="../../shop/index.html">SHOP</a>
+      </div>
+      <div class="menu-track menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" href="../../tracking/index.html">TRACKING</a>
+      </div>
+      <div class="menu-about menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" href="../../about/index.html">ABOUT</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="smoothscrollwrapper">
+    <div class="centering" style="padding-top:1.5in">
+      <div class="isi-cont">
+        <h1>Is the Fashion Industry Environment Friendly?</h1>
+        
+        <p>
+          Mother Earth is desperately in need of protection. Human beings have harmed the Earth immensely, already. Emitting large quantities of carbon into the atmosphere of the Earth, making certain species extinct from the surface of the Earth, and depleting some rare natural resources are to name a few. Every step that we take ought to be eco friendly.
+        </p>
+        <img src="https://static.fibre2fashion.com/articleresources/images/62/6161/is-the-fashion.jpg" alt="">
+        <p>How could fashion be left out under such circumstances? It is necessary for designers and fashion product manufacturers to indulge in eco friendly and sustainable fashion for the betterment of humanity. This measurement is necessary from a long term perspective. Countries are increasingly adopting this concept and working in accordance.
+        </p>
+        <p>
+          The global fashion industry has evolved considerably in the last five years. Apart from the traditional fashion biggies like US, France, Italy, and UK, emerging fashion markets have also cropped up like India, UAE, South Africa, Russia, Singapore, and Brazil. They all serve the fashion industry well, but from the looks of it they have not been able to serve Nature equally well!
+
+
+        </p>
+        <p>
+          Manufacturers are only concerned with the raw material. They hardly take note of the exploitation imposed on animals in order to obtain the raw material. Animals, especially cattle are brutally skinned alive, cut open, or electrocuted to make leather out of their skin. Sheep, foxes, rabbits, dogs, and cats are reared under miserable conditions for fur.
+
+        </p>
+
+        <p>Reptiles like snakes, alligators, crocodiles, and turtles are tortured to satisfy the exotic skin industry. Designers make use of these exotic skins without bothering to find out whether the supplier used ethical measures to obtain them. Stingrays and sharks are captured and slaughtered for their skin. They are getting extinct because of this practice.
+
+        </p>
+
+        <p>NDOGS MERCH products are 100% environmentally friendly. We are completely not using animal products. Therefore, there is nothing to worry about in our products towards the environment.</p>
+
+
+      </div>
+      <a href="../../about/index.html" class="button-primary">see about NDOGS article</a>
+
+
+
+    </div>
+  </div>
+
+  <script>
+    //smooth scrolling
+    const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+    var offset = 0;
+    body.style.height = Math.floor(height) + "px";
+    function smoothScroll() {
+      offset += (window.pageYOffset - offset) * speed;
+      var scroll = "translateY(-" + offset + "px)";
+      scrollWrap.style.transform = scroll;
+      callScroll = requestAnimationFrame(smoothScroll);
+    }
+    smoothScroll()
+  </script>
+  <script src="../../cart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

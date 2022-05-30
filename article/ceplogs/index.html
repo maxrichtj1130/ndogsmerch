@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../scrollbar.css">
+  <link rel="stylesheet" href="../../cart.css">
+  <link rel="stylesheet" href="../../navbar.css">
+</head>
+
+<body>
+  <h6 style="position: fixed; z-index:10000000; text-align:center; width:100%; bottom: -10px; font-size:6.9px">
+    Copyright© 2022 Max</h6>
+  <!--cart-->
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+    <div class="cartmenu">
+      <h4 id="cartjudul">CART</h4>
+      <a href="#/" onclick="closecart()" id="cartclose">CLOSE</a>
+      <div class="cartitems-container">
+      </div>
+      <div id="subtotal">
+        <span class="totalitem">3 item(s)</span>
+        <span class="subtotal-judul">SUBTOTAL : IDR</span>
+        <span class="subtotal-angka">XXX.000</span>
+      </div>
+      <a href="#/" class="checkout-btn">CHECKOUT</a>
+    </div>
+  </div>
+
+
+  <div class="noise"></div>
+  <div class="navbar">
+    <a href="../../index.html"><img id="logo" src="https://maxrichardo.com/ndogs/images/logo.png" alt=""></a>
+  </div>
+  <div class="navbar-menu">
+    <div class="menu1">
+      <div class="menu-yt menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://youtube.com/ndogs">YOUTUBE</a>
+      </div>
+      <div class="menu-ig menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://instagram.com/ndogsmerch">INSTAGRAM</a>
+      </div>
+      <div class="menu-tw menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://twitter.com/ndogsmerch">TWITTER</a>
+      </div>
+    </div>
+    <div class="menu2">
+      <div class="menu-shop menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" href="../../shop/index.html">SHOP</a>
+      </div>
+      <div class="menu-track menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" href="../../tracking/index.html">TRACKING</a>
+      </div>
+      <div class="menu-about menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" href="../../about/index.html">ABOUT</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="smoothscrollwrapper">
+    <div class="centering" style="padding-top:1.5in">
+      <div class="isi-cont">
+        <h1>CEPLOGS edition</h1>
+        <p>
+          CEPLOGS edition is one of our collections on NDOGS merch. The word 'ceplogs' originated from the Javanese word
+          for sunny-side-up egg (endok ceplok). So, this whole collection has the design of a sunny-side-up egg on top
+          of it. sunny-side-up is also one of the simplest and most popular ways to process an egg around the world.
+          This collection consists of two kinds of product : t-shirts and hoodies
+        </p>
+        <div class="carousel">
+          <div class="sect-cont"></div>
+        </div>
+        <p>Currently we have two designs : the original design of endok ceplok and the vectorize design of endok ceplok.
+          With five differnt colors : white, black, skyblue, chocolate, yellowgreen
+        </p>
+        <p>
+          Our hoodie is a go to for any cold weather climate or any brand that values a true heavy weight garment.
+          Handcrafted with premium ring spung cotton.
+          Created with a 3-end fleece for comfort.
+          Unisex, suitable for male and female.
+          Made with Solid Colors: 70% Cotton, 30% Polyester with 32 singles face yarn for supreme printability and
+          softness;
+        </p>
+        <p>
+          Our t-shirt is suitable for casual activities. It has relaxed fit,
+          Crew neck,
+          Heavy weight 6.5 oz, 22-singles.
+          100% combed cotton (heathers 15% viscose).
+          Neck ribbing, side seamed, shoulder to shoulder tape, double needle hems, preshrunk to minimize shrinkage.
+
+        </p>
+
+
+      </div>
+      <a href="../../about/index.html" class="button-primary">see about NDOGS article</a>
+
+
+
+    </div>
+  </div>
+
+  <script>
+    //smooth scrolling
+    const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+    var offset = 0;
+    body.style.height = Math.floor(height) + "px";
+    function smoothScroll() {
+      offset += (window.pageYOffset - offset) * speed;
+      var scroll = "translateY(-" + offset + "px)";
+      scrollWrap.style.transform = scroll;
+      callScroll = requestAnimationFrame(smoothScroll);
+    }
+    smoothScroll()
+  </script>
+  <script src="../../cart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+:root{
+    --primary: #ffe690;
+    --secondary:#4a2e14;
+}
+
+@font-face{
+    font-family: Makasih;
+    src:url(images/Makasih.ttf) format("truetype");
+}
+
+*{
+    font-family: Makasih;
+    color:var(--secondary);
+    align-self: center;
+}
+body {
+    background-color:lemonchiffon;
+    margin: 0;
+
+}
+
+ /* custom scrollbar */
+ ::-webkit-scrollbar {
+    width: 1vw;
+  }
+  
+  ::-webkit-scrollbar-track {
+    padding: 2px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 10px;
+    border: 3px solid lemonchiffon;
+  } 
+
+
+
+
+.smoothscrollwrapper{
+    position: fixed;
+    top:0;
+    left:0;
+    overflow:hidden;
+    width: 100%;
+    
+}
+.centering{
+    display:flex; flex-direction:column; justify-content:center;
+}
+
+
+#carticon{
+    padding: 10px 25px;
+    position: fixed;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    margin: 15px;
+    color: rgb(255,225,144);
+    color: linear-gradient(0deg, rgba(255,225,144,1) 0%, rgba(255,230,144,1) 41%, rgba(255,255,187,1) 91%, rgba(255,255,198,1) 100%, rgba(255,255,225,1) 100%);
+    text-decoration: none;
+    right: 0;
+    z-index: 6969;
+    font-size: 18px;
+    transition: all 333ms;
+    
+}
+
+#carticon:hover{
+    padding: 12px 33px;
+    font-size: 22px;
+    margin: 10px;
+    
+
+}
+
+.noise{
+    background-image: url('https://maxrichardo.com/ndogs/images/noise.png');
+    background-repeat: repeat;
+    background-size: 1.1in;
+    z-index: 10000000;
+    mix-blend-mode: color-burn;
+    background-color: white;
+    position: fixed;
+    opacity: .5;
+    width: 300%;
+    height: 300%;
+    top:0;
+    pointer-events: none;
+
+}
+
+#logo{
+    width: 888px;
+    margin-top: 1in;
+    z-index: 69;
+    transition: all 100ms;
+}
+
+#descdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#desc{
+    overflow: hidden; 
+    border-right: 3px solid orange; 
+    white-space: nowrap;
+    animation: 
+      typing 8s steps(26, end) infinite,
+      blink-caret .75s step-end infinite;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    margin-top: -10px;
+    letter-spacing: 3px;
+    font-size: 22px;
+}   
+
+
+@keyframes typing {
+    0% { width: 0 }
+    33% { width:  450px}
+    93% { width:  450px}
+    100% { width: 0 }
+  }
+
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+#crott{
+    width: 666px;
+    height: 140px;
+    opacity: .5;
+    transform: rotate(-1deg);
+    transition: all 500ms;
+    
+}
+
+.button-primary{
+    padding: 20px 30px;
+    background: rgb(255,225,144);
+    background: linear-gradient(0deg, rgba(255,225,144,1) 0%, rgba(255,230,144,1) 41%, rgba(255,255,187,1) 91%, rgba(255,255,198,1) 100%, rgba(255,255,225,1) 100%);
+    text-decoration: none;
+}
+
+#shopnow{
+    border: 5px solid var(--secondary);
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: -40px;
+    z-index: 5;
+    transition: all 500ms;
+}
+
+#shopnow:hover{
+    font-size: 37px ;
+    border-radius: 25px;
+    border: 7px solid var(--secondary);
+    
+    
+}
+
+.foot1{
+    width: 48vw;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    z-index: 5;
+    
+}
+.foot2{
+    width: 48vw;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    text-align: right;
+    z-index: 5;
+    
+}
+
+.sosmed{
+    margin: 0 10px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14pt;
+    border-bottom: 5px solid var(--secondary);
+    transition: all 300ms;
+    transition-delay: 100ms;
+    
+}
+.sosmed:hover{
+    font-size: 16pt;
+    padding: 8px 5px;
+    border-bottom: 5px solid var(--secondary);
+    background-color: var(--secondary);
+    color: #ffcd59;
+    opacity: .8;
+
+}
+
+
+.content{
+    width: 800px;
+    height: 500px;
+    padding: 20px 30px;
+    background: rgb(255,225,144);
+    background: linear-gradient(180deg, rgba(255,225,144,1) 0%, rgba(255,230,144,1) 41%, rgba(255,255,187,1) 91%, rgba(255,255,198,1) 100%, rgba(255,255,225,1) 100%);
+    text-decoration: none;
+    margin: 25vh 0;
+    border-radius: 50px;
+    
+}
+
+.content iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}

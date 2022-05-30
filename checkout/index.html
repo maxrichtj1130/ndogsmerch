@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../navbar.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../scrollbar.css">
+
+
+</head>
+
+<body>
+  <div class="noise"></div>
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+
+  </div>
+
+
+  <div class="noise"></div>
+  <div class="navbar">
+    <a href="../index.html"><img id="logo" src="https://maxrichardo.com/ndogs/images/logo.png" alt=""></a>
+  </div>
+  <div class="navbar-menu">
+    <div class="menu1">
+      <div class="menu-yt menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://youtube.com/ndogs">YOUTUBE</a>
+      </div>
+      <div class="menu-ig menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://instagram.com/ndogsmerch">INSTAGRAM</a>
+      </div>
+      <div class="menu-tw menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://twitter.com/ndogsmerch">TWITTER</a>
+      </div>
+    </div>
+    <div class="menu2">
+      <div class="menu-shop menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" href="../shop/index.html">SHOP</a>
+      </div>
+      <div class="menu-track menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" href="../tracking/index.html">TRACKING</a>
+      </div>
+      <div class="menu-about menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" href="../about/index.html">ABOUT</a>
+      </div>
+    </div>
+  </div>
+  <!--isi-->
+  <div class="smoothscrollwrapper">
+    <div class="centering" style="padding-top:33pt">
+      <form class="asd" action="../tracking/index.html" method="post" onsubmit="return validateMyForm();">
+        <div class="bagiankiri">
+          <a style="font-size: 8pt;" href="../shop/index.html">
+            << BACK TO SHOP</a>
+              <h1>CHECKOUT</h1>
+
+              <div class="name-cont">
+                <input type="text" id="firstName" placeholder="First Name" size="16" required>
+                <input type="text" id="lastName" placeholder="Last Name" size="16">
+              </div>
+              <input type="email" id="email" placeholder="E-mail" required>
+              <br><br>
+              <input type="text" id="alamat" placeholder="Alamat" required>
+              <div class="name-cont">
+                <input type="text" id="negara" value="Indonesia" disabled>
+                <select id="provinsi">
+                </select>
+              </div>
+              <div class="kk-cont">
+                <input type="text" id="kotakab" placeholder="Kota/Kabupaten" size="16" required>
+                <input type="text" id="kecamatan" placeholder="Kecamatan" size="16" required>
+              </div>
+              <div class="dp-cont">
+                <input type="text" id="desa" placeholder="Kelurahan/Desa" size="16">
+                <input type="number" id="kodepos" placeholder="Kode Pos" size="16">
+              </div>
+              <br>
+              <input type="text" id="telepon" placeholder="Telepon/WA yang dapat dihubungi" required>
+              <input type="text" id="catatan" placeholder="Catatan untuk penjual (optional)">
+              <input type="submit" id="make-order" value="MAKE ORDER" onclick="scrolltop()">
+        </div>
+
+        <div class="bagiankanan">
+          <div class="cartmenu">
+            <h4 id="cartjudul">CART</h4>
+            <div class="cartitems-container">
+            </div>
+            <div id="subtotal">
+              <span class="totalitem">3 item(s)</span>
+              <span class="subtotal-judul">SUBTOTAL : IDR</span>
+              <span class="subtotal-angka"></span>
+            </div>
+            <a href="#/" class="checkout-btn">CHECKOUT</a>
+          </div>
+          <div class="shipping">
+
+            <h4>SHIPPING</h4>
+            <div class="shipcont">
+              <a href="#/" class="ship ship1">JNE</a>
+              <a href="#/" class="ship ship2">J&T</a>
+              <a href="#/" class="ship ship3">SICEPAT</a>
+            </div>
+
+            <div class="shipfee">
+              <h5 class="shipfee-title">shipping fee : IDR</h5>
+              <h5 class="shipfee-angka"> - </h5>
+            </div>
+
+          </div>
+          <div class="shipping">
+            <h4>PAYMENT</h4>
+            <div class="coupon-cont">
+              <input type="text" id="coupon" placeholder="coupon code">
+              <a href="#/" class="couponyes">APPLY</a>
+              <span id="coupon-hasil"></span>
+            </div>
+            <span style="font-size: 8pt; margin-left: 10pt; margin-top:0;">coba 'maxganteng' </span>
+            <div class="grandtotal">
+              <span class="totaljudul">TOTAL : IDR</span>
+              <span class="totalangka"></span>
+            </div>
+            <select id="paymethod" required>
+              <option value="">Pilih rekening</option>
+              <option value="BCA">Bank BCA</option>
+              <option value="Mandiri">Bank Mandiri</option>
+            </select>
+            <span id="norek"></span>
+
+
+          </div>
+
+
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+    //smooth scrolling
+    const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+    var offset = 0;
+    body.style.height = Math.floor(height) + "px";
+    function smoothScroll() {
+      offset += (window.pageYOffset - offset) * speed;
+      var scroll = "translateY(-" + offset + "px)";
+      scrollWrap.style.transform = scroll;
+      callScroll = requestAnimationFrame(smoothScroll);
+    }
+    smoothScroll()
+
+
+
+  </script>
+  <script src="../cart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

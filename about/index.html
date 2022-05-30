@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../scrollbar.css">
+  <link rel="stylesheet" href="../cart.css">
+  <link rel="stylesheet" href="../navbar.css">
+</head>
+
+<body>
+  <h6 style="position: fixed; z-index:10000000; text-align:center; width:100%; bottom: -10px; font-size:6.9px">
+    Copyright© 2022 Max</h6>
+  <!--cart-->
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+    <div class="cartmenu">
+      <h4 id="cartjudul">CART</h4>
+      <a href="#/" onclick="closecart()" id="cartclose">CLOSE</a>
+      <div class="cartitems-container">
+      </div>
+      <div id="subtotal">
+        <span class="totalitem">3 item(s)</span>
+        <span class="subtotal-judul">SUBTOTAL : IDR</span>
+        <span class="subtotal-angka">XXX.000</span>
+      </div>
+      <a href="#/" class="checkout-btn">CHECKOUT</a>
+    </div>
+  </div>
+
+
+  <div class="noise"></div>
+  <div class="navbar">
+    <a href="../index.html"><img id="logo" src="https://maxrichardo.com/ndogs/images/logo.png" alt=""></a>
+  </div>
+  <div class="navbar-menu">
+    <div class="menu1">
+      <div class="menu-yt menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://youtube.com/ndogs">YOUTUBE</a>
+      </div>
+      <div class="menu-ig menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://instagram.com/ndogsmerch">INSTAGRAM</a>
+      </div>
+      <div class="menu-tw menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://twitter.com/ndogsmerch">TWITTER</a>
+      </div>
+    </div>
+    <div class="menu2">
+      <div class="menu-shop menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" href="../shop/index.html">SHOP</a>
+      </div>
+      <div class="menu-track menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" href="../tracking/index.html">TRACKING</a>
+      </div>
+      <div class="menu-about menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" href="../about/index.html">ABOUT</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="smoothscrollwrapper">
+    <div class="centering" style="padding-top:1in">
+      <h1>ABOUT NDOGS</h1>
+      <img src="https://maxrichardo.com/ndogs/images/logo.png" id="logogede">
+      <div class="isi-cont">
+        <p><b>NDOGS merch </b>is a collection of egg-themed t-shirts and hoodies. Established in 2022, based in Malang,
+          Indonesia. The creator chose eggs as a theme due to his love of eggs. The egg is a very simple dish used in
+          culinary worlds all over the world. So that we present to you our egg-themed fashion collection..
+        </p>
+        <p>
+          All of our products have our signature designs on top of it. Each product has different unique designs and
+          came in five different colors: white, black, sky-blue, chocolate, and yellow-green. The designs represent each
+          of our collections: ceplogs edition and godogs edition. We will soon be enriching our products and
+          collections
+        <p>
+          Our products are made for environmental and human-friendly reasons, our products are only made when you order
+          them. Typically, our products will be made immediately, we will send you the tracking information as soon as
+          they are shipped. We ship all over Indonesia.
+        </p>
+      </div>
+      <div class="article-btn">
+        <a href="../article/ceplogs/index.html" class="button-primary">ceplogs article</a>
+        <a href="../article/godogs/index.html" class="button-primary">godogs article</a>
+        <a href="../article/bonus/index.html" class="button-primary">bonus article</a>
+      </div>
+
+      <h2>CREATOR PROFILE</h2>
+      <div class="profil">
+        <img src="../images/fotomax.jpg" alt="fotomax" id="fotomax">
+        <div class="ident">
+          Max Richardo
+          Tjandra <br>
+          10 MIPA 3 / 26<br>
+          SMAK Kolese Santo Yusup
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+  <script>
+    //smooth scrolling
+    const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+    var offset = 0;
+    body.style.height = Math.floor(height) + "px";
+    function smoothScroll() {
+      offset += (window.pageYOffset - offset) * speed;
+      var scroll = "translateY(-" + offset + "px)";
+      scrollWrap.style.transform = scroll;
+      callScroll = requestAnimationFrame(smoothScroll);
+    }
+    smoothScroll()
+  </script>
+  <script src="../cart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

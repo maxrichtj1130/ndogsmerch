@@ -1,0 +1,119 @@
+:root {
+    --primary: #ffe690;
+    --secondary: #4a2e14;
+}
+
+#index{
+    display: none;
+}
+
+@font-face {
+    font-family: Makasih;
+    src: url(../images/Makasih.ttf) format("truetype");
+}
+
+* {
+    font-family: Makasih;
+    color: var(--secondary);
+    align-self: center;
+
+}
+
+body {
+    background-color: lemonchiffon;
+    margin: 0;
+
+
+}
+
+.smoothscrollwrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.centering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.isi-cont{
+    width: 800px;
+}
+
+.isi-cont p{
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 30px;
+}
+
+.noise {
+    background-image: url('https://maxrichardo.com/ndogs/images/noise.png');
+    background-repeat: repeat;
+    background-size: auto;
+    z-index: 696969696;
+    mix-blend-mode: color-burn;
+    background-color: white;
+    position: fixed;
+    opacity: .1;
+    width: 300%;
+    height: 300%;
+    top: 0;
+    pointer-events: none;
+
+}
+
+
+
+#logo {
+    height: 60px;
+    z-index: 70;
+    transform: translateY(40%);
+    margin-top: -45px;
+    transition: all 888ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+#logo:hover {
+    height: 88px;
+
+}
+
+#logogede{
+    width: 555px;
+}
+
+
+
+#fotomax{
+    width: 120px;
+    margin: 10px;
+}
+
+.profil{
+    display: flex;
+    margin-bottom: 500px;
+}
+
+.ident{
+    font-size: large;
+}
+
+.button-primary {
+    padding: .5vw;
+    border-radius: .5vw;
+    border: 1px solid var(--secondary);
+    background: rgb(255, 225, 144);
+    background: linear-gradient(0deg, rgba(255, 225, 144, 1) 0%, rgba(255, 230, 144, 1) 41%, rgba(255, 255, 187, 1) 91%, rgba(255, 255, 198, 1) 100%, rgba(255, 255, 225, 1) 100%);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.article-btn{
+    display: flex;
+}

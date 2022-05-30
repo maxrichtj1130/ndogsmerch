@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../scrollbar.css">
+  <link rel="stylesheet" href="../cart.css">
+  <link rel="stylesheet" href="../navbar.css">
+</head>
+
+<body>
+
+  <!--index SKU-->
+  <i id="index">4</i>
+
+
+  <div class="noise"></div>
+  <a href="#/" onclick="showcart()" id="carticon"><i class="fa-solid fa-basket-shopping"></i>CART</a>
+  <div class="cartoverlay">
+    <div class="cartmenu">
+      <h4 id="cartjudul">CART</h4>
+      <a href="#/" onclick="closecart()" id="cartclose">CLOSE</a>
+      <div class="cartitems-container">
+      </div>
+      <div id="subtotal">
+        <span class="totalitem">3 item(s)</span>
+        <span class="subtotal-judul">SUBTOTAL : IDR</span>
+        <span class="subtotal-angka">XXX.000</span>
+      </div>
+      <a href="#/" class="checkout-btn">CHECKOUT</a>
+    </div>
+  </div>
+
+
+  <div class="noise"></div>
+  <div class="navbar">
+    <a href="../index.html"><img id="logo" src="https://maxrichardo.com/ndogs/images/logo.png" alt=""></a>
+  </div>
+  <div class="navbar-menu">
+    <div class="menu1">
+      <div class="menu-yt menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://youtu.be/6BJCf_ObwyU">YOUTUBE</a>
+      </div>
+      <div class="menu-ig menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://instagram.com/ndogsmerch">INSTAGRAM</a>
+      </div>
+      <div class="menu-tw menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" target="_blank" href="https://twitter.com/ndogsmerch">TWITTER</a>
+      </div>
+    </div>
+    <div class="menu2">
+      <div class="menu-shop menu-cont">
+        <div class="ytgaris garismenu"></div>
+        <a class="sosmed" href="../shop/index.html">SHOP</a>
+      </div>
+      <div class="menu-track menu-cont">
+        <div class="iggaris garismenu"></div>
+        <a class="sosmed" href="../tracking/index.html">TRACKING</a>
+      </div>
+      <div class="menu-about menu-cont">
+        <div class="twgaris garismenu"></div>
+        <a class="sosmed" href="../about/index.html">ABOUT</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- isi -->
+  <div class="smoothscrollwrapper">
+    <div class="centering" style="padding-top:1in">
+      <div class="gambarproduk">
+        <div class="gambar-cont">
+          <img class="gbr" src="" alt="">
+          <img class="gbr" src="" alt="">
+          <img class="gbr" src="" alt="">
+          <img class="gbr" src="" alt="">
+          <img class="gbr" src="" alt="">
+        </div>
+      </div>
+      <a href="../shop/index.html" class="back-btn"><< BACK</a>
+      <span class="harga">169 K</span>
+      <div class="tulisan">
+        <h1 class="namaproduk"></h1>
+        <div class="select">
+          <div class="selsize-cont">
+            <span class="ssz">Select Size :</span>
+            <div class="ssize-cont">
+              <a class="ssizeS" href="#/">S</a>
+              <a class="ssizeM" href="#/">M</a>
+              <a class="ssizeL" href="#/">L</a>
+              <a class="ssizeXL" href="#/">XL</a>
+            </div>
+          </div>
+          <div class="selcolor-cont">
+            <span class="ssz">Select Color :</span>
+            <div class="scolor-cont">
+              <a class="scolor scolor1" href="#/">.</a>
+              <a class="scolor scolor2" href="#/">.</a>
+              <a class="scolor scolor3" href="#/">.</a>
+              <a class="scolor scolor4" href="#/">.</a>
+              <a class="scolor scolor5" href="#/">.</a>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="ddz">DESCRIPTION</div>
+          <div class="descisi">
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia qui saepe, laboriosam explicabo possimus
+              aspernatur dolorum a incidunt repellendus natus consectetur quo tempore expedita obcaecati quasi
+              exercitationem perferendis, facere temporibus numquam neque. Incidunt commodi, perspiciatis deserunt optio
+              id dolores minus hic officiis consequuntur voluptatum omnis molestiae consequatur, provident nisi
+              repudiandae dignissimos corporis debitis sint eaque animi? Vitae amet facilis, suscipit numquam in nihil
+              magnam ut aliquam voluptates molestias possimus cumque quasi eligendi similique, delectus rem qui
+              doloremque quos sint. Quia iure odio, aperiam ea ipsam tempora, quis tempore voluptates nesciunt sint unde
+              porro officia quae. Libero fugiat rerum mollitia nostrum.
+            </span>
+          </div>
+          <div class="readmore"><a href="../article/godogs/index.html" class="button-primary">read more about >></a></div>
+        </div>
+
+      </div>
+      <div class="addtobag">
+        <a href="#/" class="bag-btn">ADD TO BAG</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //smooth scrolling
+    const body = document.body,
+      scrollWrap = document.getElementsByClassName("smoothscrollwrapper")[0],
+      height = scrollWrap.getBoundingClientRect().height - 1,
+      speed = 0.12;
+    var offset = 0;
+    body.style.height = Math.floor(height) + "px";
+    function smoothScroll() {
+      offset += (window.pageYOffset - offset) * speed;
+      var scroll = "translateY(-" + offset + "px)";
+      scrollWrap.style.transform = scroll;
+      callScroll = requestAnimationFrame(smoothScroll);
+    }
+    smoothScroll()
+
+
+
+  </script>
+  <script src="../cart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
